@@ -79,9 +79,9 @@ $(function () {
   //===== Slick
 
   $(".testimonial-active").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     speed: 800,
     arrows: false,
     dots: true,
@@ -121,21 +121,21 @@ $(function () {
   // Show or hide the sticky footer button
   $(window).on("scroll", function (event) {
     if ($(this).scrollTop() > 900) {
-      $(".back-to-top").fadeIn(200);
+      $(".up").fadeIn(200);
     } else {
-      $(".back-to-top").fadeOut(200);
+      $(".up").fadeOut(200);
     }
   });
 
   //Animate the scroll to yop
-  $(".back-to-top").on("click", function (event) {
+  $(".up").on("click", function (event) {
     event.preventDefault();
 
     $("html, body").animate(
       {
         scrollTop: 0,
       },
-      1500
+      1000
     );
   });
 

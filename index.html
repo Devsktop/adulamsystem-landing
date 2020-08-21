@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdulamSystem</title>
     <link rel="stylesheet" href="css/normalize.css" />
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- AOS Animattion -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="public/css/main.css" />
     <link rel="stylesheet" href="public/css/index.css" />
 </head>
@@ -42,7 +49,7 @@
         </nav>
 
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content data-aos="fade-right">
                 <h1>Te Ofrecemos Los Mejores Productos De Tecnología Del Mercado En Maracaibo</h1>
                 <p>Somos tienda física 100% responsable y comprometidos con nuestra labor</p>
                 <a href="/products" class="button">Comprar ahora</a>
@@ -223,6 +230,9 @@
                     </div>
                 </div>
             </div>
+            <div class="blog-bt">
+                <a href="#" class="button blog-bt">MÁS ENTRADAS</a>
+            </div>
         </section>
     </div>
 
@@ -266,35 +276,67 @@
         <h2>Nuestros Felices Clientes</h2>
         <p class="desc">Algunos testimoniales del gran trabajo que podemos ofrecerte</p>
 
-        <div class="quotes">
+        <div class="testimonial-active">
             <div class="quote">
                 <img src="/img/Testimonial 1.png" alt="Testimonial" loading="lazy">
                 <p>Barry Hale</p>
-                <blockquote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus delectus
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus
+                    delectus
                     facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
             </div>
 
             <div class="quote">
                 <img src="/img/Testimonial 2.png" alt="Testimonial" loading="lazy">
                 <p>Deke Shaw</p>
-                <blockquote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus delectus
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde
+                    repellendus delectus
                     facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
             </div>
 
             <div class="quote">
                 <img src="/img/Testimonial 3.png" alt="Testimonial" loading="lazy">
                 <p>Adrian King</p>
-                <blockquote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus delectus
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus
+                    delectus
+                    facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
+            </div>
+
+            <div class="quote">
+                <img src="/img/Testimonial 3.png" alt="Testimonial" loading="lazy">
+                <p>Fitz Simmons</p>
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus
+                    delectus
+                    facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
+            </div>
+
+            <div class="quote">
+                <img src="/img/Testimonial 3.png" alt="Testimonial" loading="lazy">
+                <p>Natalia Malick</p>
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus
+                    delectus
+                    facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
+            </div>
+
+            <div class="quote">
+                <img src="/img/Testimonial 3.png" alt="Testimonial" loading="lazy">
+                <p>Coulson Jhonson</p>
+                <blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus
+                    delectus
                     facilis quia consequatur maxime perferendis! Sequi, modi consequatur."</blockquote>
             </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <div class="blog-bg">
         <section id="contact" class="container section">
             <h2>Encuentranos</h2>
             <p class="desc">Visítanos somos tienda física</p>
-            <img src="img/Map.png" alt="Mapa">
+            <div class="map">
+                <iframe id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </section>
     </div>
 
@@ -346,6 +388,7 @@
             </form>
         </div>
     </section>
+<!-- End Contact -->
 
     <footer>
         <div class="logo-footer">
@@ -353,17 +396,24 @@
         </div>
 
         <div class="social-media">
-            <p>+58 - 424 - 6438964</p>
-            <p>adulamsystem@hotmail.com</p>
             <img src="img/Whatsapp.png" alt="Whatsapp">
             <img src="img/Instagram.png" alt="Instagram">
+        </div>
+
+        <div class="footer-contact">
+            <p>+58 - 424 - 6438964</p>
+            <p>adulamsystem@hotmail.com</p>
         </div>
 
         <p class="copy">Desarrollado y Diseñado Por Devsktop</p>
         <p class="copy">Todos los derechos reservados 2020</p>
     </footer>
 
+    <!-- Up Arrow -->
+    <a href="#" class="up"><img src="img/Up.svg" alt="Boton Subir"></a>
 
+
+    <!-- Dependencies -->
     <script src="scripts/vendor/modernizr-3.6.0.min.js"></script>
     <script src="scripts/vendor/jquery-1.12.4.min.js"></script>
     <script src="scripts/jquery.easing.min.js"></script>
@@ -372,6 +422,19 @@
     <!-- Counter Up -->
     <script src="scripts/waypoints.min.js"></script>
     <script src="scripts/jquery.counterup.min.js"></script>
+
+    <!-- Slick -->
+    <script src="scripts/slick.min.js"></script>
+
+    <!-- AOS Animation -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease',
+            duration: 1200,
+            once: true
+        });
+    </script> -->
 
     <!-- Main.js -->
     <script src="scripts/main.js"></script>

@@ -153,9 +153,17 @@
         color: #062006
         border-color: #062006
 
+        &:hover
+            background-color: #062006
+            color: #D4F7D3
+
     & .bt-white
         color: #D4F7D3
         border-color: #D4F7D3
+
+        &:hover
+            background: #D4F7D3
+            color: #062006
 
 // Blog
 .blog-bg
@@ -203,8 +211,22 @@
         font-size: 1.5rem
         font-family: lato
         text-transform: uppercase
+    
+    &-bt
+        display: flex
+        justify-content: center
+        margin-top: 4rem
 
+        & a
+            background-color: #0D5F0C
+            color: white
+            border-color: #0D5F0C
 
+            &:hover
+                background-color: white
+                color: #0D5F0C
+
+    
 // Us
 
 .us
@@ -239,6 +261,11 @@
         font-size: 3rem
         font-weight: bold
         margin-bottom: .5rem
+
+        &::after
+            content: '+'
+            position: absolute
+            font-size: 3rem
     
     &-name
         font-family: lato
@@ -271,13 +298,35 @@
         display: inline-block
         border-color: white
 
+        &:hover
+            background: white
+            color: black
+
 
 // Testiominals
 
 .quotes
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-column-gap: 2rem
+
+.testimonial-active
+    & .slick-dots 
+        text-align: center
+        margin-top: 25px
+
+        & li
+            display: inline-block
+            margin: 0 3px
+
+            & button 
+                font-size: 0
+                width: 12px
+                height: 12px
+                border-radius: 50%
+                background-color: #D4F7D3
+                border: 0
+                cursor: pointer
+
+            &.slick-active button 
+                background-color: #32D830
 
 .quote
     display: flex
@@ -287,9 +336,12 @@
     padding: 3rem
     border-radius: 1rem
     text-align: center
+    max-width: 42rem
+    margin-right: 4rem
 
     & img
         margin-bottom: 2rem
+        display: inline-block
 
     & p
         font-family: raleway
@@ -297,8 +349,18 @@
         font-weight: bold
         margin-bottom: 2rem
 
+    & blockquote
+        max-width: 35rem
+
 
 // Contact
+.map 
+    display: flex
+    justify-content: center
+
+    & #gmap_canvas
+        width: 128rem
+        height: 50rem
 
 .contact-panel-info
     display: grid
@@ -347,6 +409,32 @@
             resize: none
 
     & .submit
-        background-color: white
+        background-color: #0D5F0C
+        color: white
+        border: .2rem solid white
+
+        &:hover
+            background-color: white
+            border-color: #0D5F0C
+            color: #0D5F0C
+
+
+// Footer
+
+footer
+    display: flex
+    flex-direction: column
+    padding: 2rem 0
+
+    & .footer-contact
+        margin-bottom: 2rem
+
+.up
+    position: fixed
+    right: 20px
+    bottom: 20px
+    z-index: 99
+    display: none
+
 
 
