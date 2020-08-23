@@ -19,12 +19,19 @@ body
     overflow-x: hidden
 
 .container 
-    width: 90%
+    width: 95%
     max-width: 135rem
     margin: 0 auto
 
 img 
     max-width: 100%
+
+h1 
+    font-size: 3.4rem
+    font-family: open sans
+    font-weight: 900
+    text-transform: uppercase
+    margin: 0 0 1.5rem 0
 
 h2 
     font-weight: bold
@@ -84,6 +91,45 @@ a
     
 // Menu
 
+.d-sm-inline-block 
+    display: inline-block!important
+
+.m-auto
+    margin: auto!important
+
+.row
+    display: flex
+    flex-wrap: wrap
+    margin-right: -15px
+    margin-left: -15px
+
+.col-lg-12
+    position: relative
+    width: 100%
+    padding-right: 15px
+    padding-left: 15px
+
+    @media (min-width: 992px)
+        flex: 0 0 100%
+        max-width: 100%
+
+.navbar-collapse
+    flex-grow: 1
+    align-items: center
+    flex-basis: 100%
+
+    @media (max-width: 767px)
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        background-color: #fff
+        z-index: 9
+        padding: 5px 12px
+
+.collapse:not(.show) 
+    display: none
+
 .navbar-area 
     position: absolute
     top: 0
@@ -95,24 +141,38 @@ a
 .sticky
     position: fixed
     z-index: 99
-    background-color: #CBF3C9
+    background-color: #fff
     box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05)
     transition: all 0.3s linear
 
     & .navbar
         padding: 10px 0
 
-.collapse:not(.show) 
-    display: none
+    & .navbar-toggler .toggler-icon
+        background-color: #222
+
+    & .navbar-nav .nav-item 
+        & a
+            color: #222
+
+        &.active > a, &:hover > a
+            color: #05de7d
 
 .navbar 
     display: flex
+    flex-wrap: wrap
     align-items: center
     justify-content: space-between
     padding: 25px 0
     border-radius: 5px
     position: relative
     transition: all 0.3s linear
+
+    &-nav
+        display: flex
+        list-style: none
+        flex-direction: column
+        padding-left: 0
 
     &-expand-lg .navbar-collapse
         @media (min-width: 992px) 
@@ -128,16 +188,18 @@ a
             display: none
 
     &-brand
+        display: inline-block
+        margin-right: 1rem
+        font-size: 1.25rem
+        line-height: inherit
+        white-space: nowrap
+        padding: 0
+
         & img 
             width: 75%
 
     &-toggler
         padding: 0
-        font-size: 1.25rem
-        line-height: 1
-        background-color: transparent
-        border: 1px solid transparent
-        border-radius: .25rem
   
         & .toggler-icon
             width: 30px
@@ -181,12 +243,7 @@ a
             box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1)
             padding: 5px 12px
 
-    &-nav
-        display: flex
-        list-style: none
-        flex-direction: column
-        margin: auto
-
+    &-nav 
         & .nav-item 
             margin-left: 40px
             position: relative
@@ -204,7 +261,7 @@ a
                 margin: 0
 
             &.active > a, &:hover > a
-                color: #109E00
+                color: #05de7d
 
             & a
                 font-size: 14px
@@ -238,6 +295,134 @@ a
             top: 50%
             right: 50px
             transform: translateY(-50%)
+
+        & .main-btn
+            background: linear-gradient(to right, #1cbe99 0%, #05de7d 50%, #1cbe99 100%)
+            height: 45px
+            line-height: 45px
+            background-size: 200%
+            display: inline-block
+            font-weight: 600
+            font-family: "Poppins", sans-serif
+            text-align: center
+            white-space: nowrap
+            vertical-align: middle
+            user-select: none
+            border: 2px solid #05de7d
+            padding: 0 30px
+            font-size: 16px
+            height: 45px
+            line-height: 45px
+            border-radius: 50px
+            color: #fff
+            cursor: pointer
+            z-index: 5
+            transition: all 0.4s linear
+            border: 0
+
+            @media (max-width: 576px)
+                display: none!important
+
+            &:hover
+                color: #fff
+                background-position: right center
+
+// Navbar-toggler
+.navbar-toggler
+    font-size: 1.25rem
+    line-height: 1
+    background-color: transparent
+    border: 1px solid transparent
+    border-radius: .25rem
+
+// Submenu
+
+.navbar-nav .nav-item:hover .sub-menu 
+    top: 100%
+    opacity: 1
+    visibility: visible
+
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        top: 0
+
+    @media (max-width: 767px) 
+        top: 0
+
+.navbar-nav .nav-item .sub-menu 
+    width: 200px
+    background-color: #fff
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1)
+    position: absolute
+    top: 110%
+    left: 0
+    opacity: 0
+    visibility: hidden
+    transition: all 0.3s linear 
+
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        position: relative
+        width: 100%
+        top: 0
+        display: none
+        opacity: 1
+        visibility: visible 
+
+    @media (max-width: 767px) 
+        position: relative
+        width: 100%
+        top: 0
+        display: none
+        opacity: 1
+        visibility: visible 
+
+        & li 
+            display: block 
+
+            & a 
+                display: block
+                padding: 8px 20px
+                color: #222
+
+                &.active, &:hover 
+                    padding-left: 25px
+                    color: #05de7d 
+        
+.navbar-nav .sub-nav-toggler 
+    display: none 
+
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        display: block
+        position: absolute
+        right: 0
+        top: 0
+        background: none
+        color: #222
+        font-size: 18px
+        border: 0
+        width: 30px
+        height: 30px
+
+    @media (max-width: 767px)
+        display: block
+        position: absolute
+        right: 0
+        top: 0
+        background: none
+        color: #222
+        font-size: 18px
+        border: 0
+        width: 30px
+        height: 30px
+
+        & span 
+            width: 8px
+            height: 8px
+            border-left: 1px solid #222
+            border-bottom: 1px solid #222
+            transform: rotate(-45deg)
+            position: relative
+            top: -5px
+
 
 /* Footer */
 
