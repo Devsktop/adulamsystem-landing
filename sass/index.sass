@@ -8,10 +8,10 @@
         padding: 10rem 0
 
 .hero
-    background: #CBF3C9
+    background-color: #99E597
 
     @include desktop()
-        background-image: url(/img/Hero.png)
+        background-image: url(../img/Hero.png)
         background-size: cover
         background-position: center center
         height: 100vh
@@ -33,7 +33,7 @@
 
     & h1
         font-size: 3rem
-        font-family: open sans
+        font-family: 'Open Sans', sans-serif
         font-weight: 900
         text-transform: uppercase
         margin: 0 0 1.5rem 0
@@ -121,7 +121,7 @@
             margin: 1.5rem 0
 
         & p 
-            font-family: lato
+            font-family: 'Lato', sans-serif
             font-size: 1.5rem
             color: #D4F7D3
             max-width: 25rem
@@ -135,22 +135,22 @@
         grid-template-columns: repeat(2, 1fr)
 
         &-img-1
-            background-image: url(/img/Product-1.png)
+            background-image: url(../img/Product-1.png)
             background-size: cover
             background-position: center center
 
         &-img-2
-            background-image: url(/img/Product-2.png)
+            background-image: url(../img/Product-2.png)
             background-size: cover
             background-position: center center
 
         &-img-3
-            background-image: url(/img/Product-3.png)
+            background-image: url(../img/Product-3.png)
             background-size: cover
             background-position: center center
 
         &-img-4
-            background-image: url(/img/Product-4.png)
+            background-image: url(../img/Product-4.png)
             background-size: cover
             background-position: center center
 
@@ -172,7 +172,7 @@
         color: #D4F7D3
 
     & h3
-        font-family: open sans
+        font-family: 'Open Sans', sans-serif
         font-size: 2.4rem
         font-weight: bold
         margin-bottom: 1.5rem
@@ -187,7 +187,7 @@
     
             &::after
                 content: ''
-                background-image: url(/img/Left-Bar.svg)
+                background-image: url(../img/Left-Bar.svg)
                 position: absolute
                 width: 1.5rem
                 height: 4.7rem
@@ -261,7 +261,7 @@
 
             &::after
                 content: ''
-                background-image: url(/img/Left-Bar-2.svg)
+                background-image: url(../img/Left-Bar-2.svg)
                 position: absolute
                 width: 0.3rem
                 height: 6rem
@@ -276,7 +276,7 @@
 
         & .blog-date
             font-size: 1.5rem
-            font-family: lato
+            font-family: 'Lato', sans-serif
             text-transform: uppercase
     
     &-bt
@@ -327,7 +327,7 @@
 
             &::after
                 content: ''
-                background-image: url(/img/Line.svg)
+                background-image: url(../img/Line.svg)
                 position: absolute
                 width: 10rem
                 height: .2rem
@@ -364,7 +364,7 @@
         margin-right: 10rem
 
     &-number
-        font-family: raleway
+        font-family: 'Raleway', sans-serif
         font-size: 3rem
         font-weight: bold
         margin-bottom: .5rem
@@ -375,14 +375,14 @@
             font-size: 3rem
     
     &-name
-        font-family: lato
+        font-family: 'Lato', sans-serif
         font-size: 1.5rem
 
 
 // Banner
 
 .banner
-    background-image: url(/img/Banner.png)
+    background-image: url(../img/Banner.png)
     background-size: cover
     background-position: center center
     text-align: center
@@ -390,13 +390,13 @@
 
     & h3
         font-size: 3rem
-        font-family: lato
+        font-family: 'Lato', sans-serif
         font-weight: bold
         margin-bottom: 1.5rem
         text-transform: inherit
 
     & p
-        font-family: lato
+        font-family: 'Lato', sans-serif
         font-size: 1.8rem
         max-width: 35rem
         margin: 0 auto
@@ -456,17 +456,19 @@
     border-radius: 1rem
     text-align: center
     margin: 0 2rem
+    height: 32rem
 
     @include desktop()
         max-width: 42rem
-        margin-right: 4rem
+        margin-right: 4rem   
+        height: 30rem
 
     & img
         margin-bottom: 2rem
         display: inline-block
 
     & p
-        font-family: raleway
+        font-family: 'Raleway', sans-serif
         font-size: 2.5rem
         font-weight: bold
         margin-bottom: 2rem
@@ -535,7 +537,7 @@
 
         & label
             font-size: 2rem
-            font-family: lato
+            font-family: 'Lato', sans-serif
             margin-bottom: 1rem
             text-align: center
             @include desktop()
